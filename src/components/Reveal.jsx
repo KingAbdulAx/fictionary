@@ -9,8 +9,9 @@ export default function Reveal({ state, myId, action }) {
   const names = (ids) => joinNames(ids.map((id) => (id === myId ? 'you' : nameOf(state, id))));
   const { result } = state;
   const notes = [];
-  if (result.unwritten.length) notes.push(`${names(result.unwritten)} didn't write in time.`);
-  if (result.unvoted.length) notes.push(`${names(result.unvoted)} didn't vote in time.`);
+  const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+  if (result.unwritten.length) notes.push(cap(`${names(result.unwritten)} didn't write in time.`));
+  if (result.unvoted.length) notes.push(cap(`${names(result.unvoted)} didn't vote in time.`));
 
   return (
     <section className="stack stack--loose">
