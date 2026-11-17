@@ -12,9 +12,7 @@ const ALLOWED_ORIGINS = parseOrigins(process.env.ALLOWED_ORIGINS);
 const words = JSON.parse(readFileSync(new URL('./words.json', import.meta.url), 'utf8'));
 const problems = validateWords(words);
 if (problems.length) {
-  console.error(`words.json has ${problems.length} problem(s):
-  ${problems.join('
-  ')}`);
+  console.error(`words.json has ${problems.length} problem(s):\n  ${problems.join('\n  ')}`);
   process.exit(1);
 }
 
