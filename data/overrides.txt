@@ -1,0 +1,104 @@
+# Hand-written definitions that replace the WordNet gloss for a word: `word | definition`.
+# Keep each one a faithful paraphrase of a WordNet sense of the word, in one plain sentence.
+# Used to pick a better-known sense, drop jargon, or say it more plainly than the raw gloss.
+
+autochthonous | native to the place where it is found
+avuncular | kind and indulgent, like an uncle
+boustrophedon | writing in which the lines run alternately from left to right and from right to left
+bricolage | something built from whatever materials happen to be available
+brummagem | cheap, showy and of poor quality
+carrel | a small private desk or cubicle for study in a library
+cartouche | an oval frame enclosing the name of a ruler in Egyptian hieroglyphics
+collywobbles | a queasy, nervous feeling in the stomach
+confabulate | talk together in a relaxed and friendly way
+cozen | trick or deceive someone
+crampon | a metal frame with spikes, fixed to a boot for walking on ice
+daedal | intricate and ingenious in design
+dewlap | a fold of loose skin hanging from the throat of an animal such as a cow
+dudgeon | a feeling of deep resentment or indignation
+entablature | the part of a classical building that rests on top of the columns
+escutcheon | a shield on which a coat of arms is displayed
+esker | a long winding ridge of gravel left behind by a retreating glacier
+flibbertigibbet | a silly, flighty and talkative person
+footle | waste time on trivial things
+fug | an airless, smoky and stuffy atmosphere
+gamboge | a gum resin used as a deep yellow pigment
+gibbous | of the moon, more than half lit but not yet full
+gimlet | a small hand tool with a screw tip for boring holes
+gobbet | a lump or chunk of something, especially food
+gyre | a spiral or circular motion
+hagiography | a biography that idealises its subject
+heliotrope | a plant whose small fragrant purple flowers turn toward the sun
+hobbledehoy | an awkward, clumsy adolescent
+hypnagogic | relating to the drowsy state just before falling asleep
+jejune | naive, simplistic and lacking in substance
+katabatic | of a wind, flowing downhill as cold air sinks
+kibitzer | a meddler who offers unwanted advice to others
+lassitude | a weary lack of energy
+lenticular | shaped like a lens, convex on both sides
+lollygag | dawdle or waste time aimlessly
+maladroit | clumsy and lacking in skill
+mandrake | a plant with a forked root once believed to have magical powers
+milquetoast | a timid, meek and unassertive person
+mollycoddle | treat someone with too much indulgence and protection
+nescience | a lack of knowledge or awareness
+noisome | offensive and unpleasant, especially in smell
+pelf | money, especially when gained dishonestly
+picayune | small and of little importance
+pulchritude | great physical beauty
+pusillanimous | lacking courage and resolve
+quadrille | a square dance performed by four couples
+quiddity | the essential nature of a thing
+raffish | carefree, unconventional and slightly disreputable
+recondite | little known and difficult to understand
+redolent | strongly reminiscent or suggestive of something
+roister | celebrate noisily and boisterously
+sconce | a bracket fixed to a wall that holds candles or a light
+sinecure | a paid position that requires little or no work
+solecism | a mistake in grammar or in etiquette
+spile | a small wooden peg or spout for drawing sap from a tree
+splenetic | bad-tempered and spiteful
+stentorian | of a voice, very loud and deep
+stultify | make dull, foolish or ineffective
+succedaneum | a substitute, especially a medicine used in place of another
+tittle | a small mark in writing, such as the dot over an i
+troglodyte | a person who lives in a cave
+tumbrel | a two-wheeled farm cart that tips backwards to empty its load
+turbid | of a liquid, cloudy with stirred-up sediment
+uxorious | foolishly fond of or submissive to one's wife
+vituperate | criticise someone harshly and abusively
+welkin | the vault of the sky
+wimple | a cloth headdress covering the head, neck and sides of the face
+winnow | separate grain from chaff by blowing air through it
+woad | a blue dye made from the leaves of a European plant
+wraith | a ghostly apparition of a person
+adumbrate | outline or summarise something briefly
+bladderwort | a water plant whose tiny bladders trap small aquatic animals
+bollard | a short strong post, such as one on a quay for mooring ships
+cadge | ask for and get something for free
+emollient | a soothing cream or lotion that softens the skin
+flummox | bewilder or completely confuse
+gudgeon | a small freshwater fish often used as bait
+hornswoggle | cheat or deceive someone
+jerboa | a small desert rodent that moves by jumping
+legerdemain | skilful sleight of hand
+limn | depict or trace the outline of something
+nubbin | a small lump or stunted piece
+objurgate | scold or rebuke sharply
+obtund | blunt or dull something
+orrery | a clockwork model of the solar system
+pellucid | clear enough to let light through
+perambulate | walk around, especially to inspect the boundaries of a piece of land
+sesquipedalian | given to using very long words
+tansy | an aromatic herb with buttonlike yellow flowers and bitter leaves
+yarrow | a strong-scented herb with feathery leaves and small white flowers
+arriviste | a person who has recently gained wealth or status but not social acceptance
+divagate | wander or stray from the main subject in speech or writing
+ephemeris | a yearly table giving the positions of the stars and planets
+mullein | a tall plant with large woolly leaves and spikes of yellow flowers
+palimpsest | a manuscript written over an earlier text that is still faintly visible
+samphire | a fleshy seashore plant with small scalelike leaves
+tarsier | a small tree-dwelling primate of Southeast Asia with huge eyes
+teasel | a tall plant with prickly flower heads once used to raise the nap on cloth
+tontine | an investment scheme in which each member's share passes to the survivors when they die
+whiffletree | a crossbar that links a pulling horse's harness to a cart or plough

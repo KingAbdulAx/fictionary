@@ -1,0 +1,18 @@
+logs
+*.log
+node_modules
+dist
+dist-ssr
+*.local
+test-results
+playwright-report
+
+# Environment files (keep the example)
+.env
+.env.*
+!.env.example
+
+.vscode/*
+.idea
+.DS_Store
+dist-e2e
