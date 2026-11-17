@@ -1,0 +1,279 @@
+/* ==========================================================================
+   Fictionary: Azed Labs design DNA.
+   Cream canvas, charcoal ink, slate / sage / amber accents, Montserrat 800 + Inter,
+   paper surfaces with hairlines, capsule controls, slow easing. No gradients, blobs or glow.
+   ========================================================================== */
+:root {
+  --cream: #F8F7F2;
+  --ink: #2D2D2D;
+  --white: #FFFFFF;
+  --slate-700: #415F6A;
+  --slate-500: #607888;
+  --sage-700: #5F6F4F;
+  --sage-500: #A0AE8D;
+  --amber-700: #8C5E10;
+  --amber-500: #DB9E48;
+
+  --muted: color-mix(in srgb, var(--ink) 70%, var(--cream));
+  --line: color-mix(in srgb, var(--ink) 13%, transparent);
+  --line-soft: color-mix(in srgb, var(--ink) 7%, transparent);
+  --paper: color-mix(in srgb, var(--white) 55%, var(--cream));
+  --amber-wash: color-mix(in srgb, var(--amber-500) 24%, var(--cream));
+  --sage-wash: color-mix(in srgb, var(--sage-500) 26%, var(--cream));
+
+  --font-heading: 'Montserrat Variable', 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Inter Variable', 'Inter', system-ui, sans-serif;
+
+  --r-surface: 1.5rem;
+  --r-control: 0.75rem;
+  --r-capsule: 999px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.1, 1);
+  --shadow: 0 18px 40px -28px color-mix(in srgb, var(--ink) 38%, transparent);
+  --gut: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 400 1rem/1.55 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: clip;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd, figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+button, input, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: var(--slate-700);
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--slate-700);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Primitives ─────────────────────────────────────────── */
+
+.paper {
+  background: var(--paper);
+  border-radius: var(--r-surface);
+  box-shadow: inset 0 0 0 1px var(--line-soft), var(--shadow);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0 1.6rem;
+  border: 0;
+  border-radius: var(--r-capsule);
+  background: var(--ink);
+  color: var(--cream);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--slate-700);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--slate-700);
+  color: var(--slate-700);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--small {
+  min-height: 2.5rem;
+  padding: 0 1.1rem;
+  font-size: 0.9rem;
+}
+
+.link-btn {
+  min-height: 2.75rem;
+  padding: 0 0.25rem;
+  border: 0;
+  background: none;
+  color: var(--slate-700);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.2s var(--ease);
+}
+
+.link-btn:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Amber capsule tag */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.75rem;
+  border-radius: var(--r-capsule);
+  background: var(--amber-wash);
+  color: var(--amber-700);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.tag--sage {
+  background: var(--sage-wash);
+  color: var(--sage-700);
+}
+
+.tag--plain {
+  background: transparent;
+  color: var(--muted);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.input {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0 1rem;
+  border: 0;
+  border-radius: var(--r-control);
+  background: var(--white);
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition: box-shadow 0.2s var(--ease);
+}
+
+.textarea {
+  display: block;
+  min-height: 7.5rem;
+  padding: 0.85rem 1rem;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.input::placeholder {
+  color: color-mix(in srgb, var(--ink) 45%, var(--cream));
+}
+
+.input:hover {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 30%, transparent);
+}
+
+.input:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--slate-700);
+}
+
+.notice {
+  color: var(--amber-700);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.rule {
+  border: 0;
+  border-top: 1px dashed var(--line);
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
