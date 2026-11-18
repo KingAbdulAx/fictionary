@@ -12,13 +12,16 @@ const ALLOWED_ORIGINS = parseOrigins(process.env.ALLOWED_ORIGINS);
 const words = JSON.parse(readFileSync(new URL('./words.json', import.meta.url), 'utf8'));
 const problems = validateWords(words);
 if (problems.length) {
-  console.error(`words.json has ${problems.length} problem(s):
-  ${problems.join('
-  ')}`);
+  console.error(`words.json has ${problems.length} problem(s):\n  ${problems.join('\n  ')}`);
   process.exit(1);
 }
 
-const server = createGameServer({ words, allowedOrigins: ALLOWED_ORIGINS });
+// Test-only knob: how many milliseconds one timer second lasts (default 1000). The e2e run sets it low
+// so a 60-second writing timer runs out in a few seconds. Leave it unset in production.
+const secondMs = Number(process.env.TIMER_SECOND_MS) || undefined;
+const timing = secondMs ? { secondMs } : undefined;
+
+const server = createGameServer({ words, allowedOrigins: ALLOWED_ORIGINS, timing });
 const port = await server.listen(PORT);
 console.log(`Fictionary server listening on port ${port} (${words.length} words, origins: ${ALLOWED_ORIGINS.join(', ') || 'any'})`);
 

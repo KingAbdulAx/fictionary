@@ -27,6 +27,7 @@ const DEFAULT_SETTINGS = { turns: 1, timer: 90, hints: true };
 
 const DEFAULT_TIMING = {
   grace: 60000, // how long a dropped player keeps their seat
+  secondMs: 1000, // length of one timer "second"; tests and e2e shrink it so timers run out quickly
 };
 
 const noop = () => {};
@@ -467,11 +468,12 @@ export class Room {
     this._clearTimer();
     this.round.deadline = null;
     if (this.handoff || !seconds) return;
-    this.round.deadline = this.clock.now() + seconds * 1000;
+    const ms = seconds * this.timing.secondMs;
+    this.round.deadline = this.clock.now() + ms;
     this.timer = this.clock.setTimeout(() => {
       this.timer = null;
       onDone();
-    }, seconds * 1000);
+    }, ms);
   }
 
   _clearTimer() {

@@ -235,6 +235,20 @@ test('the writing timer closes writing without the stragglers; they are skipped'
   assert.deepEqual(room.round.result.unvoted.sort(), [ids.Ben, ids.Chi].sort());
 });
 
+test('timing.secondMs shrinks the timers (used by the e2e run)', () => {
+  const clock = fakeClock();
+  const room = new Room({ words: WORDS, clock, rng: () => 0.42, settings: { timer: 60 }, timing: { secondMs: 10 } });
+  const ids = ['Ada', 'Ben', 'Chi'].map((n) => room.addPlayer(n).player.id);
+  room.start(ids[0]);
+  room.choose(room.round.pickerId, 0);
+  assert.equal(room.state(ids[0]).deadlineInMs, 600);
+  room.submit(ids[1], 'A thing made up.');
+  clock.advance(600);
+  assert.equal(room.phase, 'voting');
+  clock.advance(VOTE_SECONDS * 10);
+  assert.equal(room.phase, 'reveal');
+});
+
 test('nobody writes before the timer: straight to the answer, nobody scores', () => {
   const { room, clock, host, ids } = setup();
   room.start(host);
